@@ -48,13 +48,13 @@ describe('colorfulDancer', function() {
   });
 
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(colorfulDancer.$node, 'toggle');
+  it('should have a step function that makes its node fade and toggle', function() {
+    sinon.spy(colorfulDancer.$node, 'fadeToggle');
     colorfulDancer.step();
-    expect(colorfulDancer.$node.toggle.called).to.be.true;
+    expect(colorfulDancer.$node.fadeToggle.called).to.be.true;
   });
 
-  describe('dance', function() {
+  describe('dance: fadeToggle', function() {
     it('should call step at least once per second', function() {
       sinon.spy(colorfulDancer, 'step');
       expect(colorfulDancer.step.callCount).to.be.equal(0);
@@ -84,13 +84,13 @@ describe('squareDancer', function() {
   });
 
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(squareDancer.$node, 'toggle');
+  it('should have a step function that makes its node slide and toggle', function() {
+    sinon.spy(squareDancer.$node, 'slideToggle');
     squareDancer.step();
-    expect(squareDancer.$node.toggle.called).to.be.true;
+    expect(squareDancer.$node.slideToggle.called).to.be.true;
   });
 
-  describe('dance', function() {
+  describe('dance: slideToggle', function() {
     it('should call step at least once per second', function() {
       sinon.spy(squareDancer, 'step');
       expect(squareDancer.step.callCount).to.be.equal(0);
