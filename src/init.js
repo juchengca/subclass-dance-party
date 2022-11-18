@@ -47,7 +47,7 @@ $(document).ready(function() {
     var nextDancer = 0;
 
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp(200, nextDancer);
+      window.dancers[i].lineUp(700, nextDancer);
       nextDancer += spacing;
     }
     // for every dancer, set position to width spacing + previous dancers width location
