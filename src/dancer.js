@@ -19,7 +19,7 @@ makeDancer.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-// function.bind(value)
+
 
 makeDancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
@@ -30,4 +30,9 @@ makeDancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
+};
+
+
+makeDancer.prototype.lineUp = function (top, left) {
+  this.setPosition.call(this, top, left);
 };

@@ -28,7 +28,14 @@ body, a:link, a:visited, a:active{
 }
 
 .colorfulDancer{
+  width: 10px;
+  height: 10px;
   position:absolute;
+}
+
+#cat{
+  width: 10px;
+  height: 10px;
 }
 
 .squareDancer{

@@ -31,14 +31,29 @@ $(document).ready(function() {
       Math.random() * 1000
     );
 
-    window.dancers.push(dancer);
+    window.dancers.push(dancer); //stan wrote this
     $('body').append(dancer.$node);
   });
 
 
   //create a line up button and add that method to every dancer and have them literally line up
 
+  $('.lineUpButton').on('click', function(event) { // BEFORE WE CONTINUE, GO BACK TO HTML PAGE AND MAKE SURE THIS IS ALSO CONSIDERED
+  //consider using set position
 
+    // getting the width of your screen
+    var spacing = $('body').width() / window.dancers.length;
+    // loop through window dancers
+    var nextDancer = 0;
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp(200, nextDancer);
+      nextDancer += spacing;
+    }
+    // for every dancer, set position to width spacing + previous dancers width location
+
+
+  });
 
 });
 

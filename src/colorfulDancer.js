@@ -1,7 +1,7 @@
 var makeColorfulDancer = function(top, left, timeBetweenSteps) {
   //debugger;
 
-  this.$node = $('<span class="colorfulDancer"><img src="picture/dancing-cat-dancing-kitten.gif"></span>');
+  this.$node = $('<span id="cat" class="colorfulDancer"><img src="picture/dancingKitty.gif"></span>');
   // .call is calling makeDancer with the 'this' value which is currently makeBlinkyDancer
   makeDancer.call(this, top, left, timeBetweenSteps);
 
