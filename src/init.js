@@ -15,7 +15,6 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
-    //debugger
     //
 
 
@@ -31,7 +30,15 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+
+  //create a line up button and add that method to every dancer and have them literally line up
+
+
+
 });
 
