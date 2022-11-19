@@ -36,7 +36,8 @@ makeBlinkyDancer.prototype.step = function() {
 
 makeBlinkyDancer.prototype.mouse = function() {
   this.$node.mouseover(function() {
-    $('dancer')
+    console.log('hi');
+    $('.dancer').css('border-radius', '0px');
   });
 
 };

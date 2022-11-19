@@ -81,15 +81,15 @@ $(document).ready(function() {
 
   });
 
-  $('.colorfulDancer').mouseover(function() {
-    console.log('test');
-    //this.$node.lineUp(700, 700);
-  });
+  // $('.colorfulDancer').mouseover(function() {
+  //   console.log('test');
+  //   //this.$node.lineUp(700, 700);
+  // });
 
-  $('.dancer').mouseover(function() {
-    console.log('test');
-    //this.$node.lineUp(700, 700);
-  });
+  // $('.dancer').mouseover(function() {
+  //   console.log('test');
+  //   //this.$node.lineUp(700, 700);
+  // });
 
   // this.$node.on('click', function(event) {
   //   delete this.$node;
