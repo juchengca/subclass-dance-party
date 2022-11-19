@@ -10,6 +10,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   // this one sets the position to some random default point within the body
   this.setPosition(top, left);
   this.timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
 };
 
 makeDancer.prototype.step = function() {
@@ -36,3 +38,18 @@ makeDancer.prototype.setPosition = function(top, left) {
 makeDancer.prototype.lineUp = function (top, left) {
   this.setPosition.call(this, top, left);
 };
+
+
+
+makeDancer.prototype.interact = function () {
+  this.$node.animate(
+    { deg: 180 },
+    {
+      duration: 1200,
+      step: function(now) {
+        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+      }
+    }
+  );
+};
+

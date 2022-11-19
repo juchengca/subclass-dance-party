@@ -11,9 +11,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // var oldStep = blinkyDancer.step;       // actually the old step from dancer
 
 
+  // this.$node.mouseover(function() {
+  //   this.
+  // });
 
-
-
+  this.mouse();
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -29,4 +31,12 @@ makeBlinkyDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+};
+
+
+makeBlinkyDancer.prototype.mouse = function() {
+  this.$node.mouseover(function() {
+    $('dancer')
+  });
+
 };

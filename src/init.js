@@ -51,9 +51,48 @@ $(document).ready(function() {
       nextDancer += spacing;
     }
     // for every dancer, set position to width spacing + previous dancers width location
+  });
 
+  $('.interact').on('click', function(event) {
+    //
+    var lastTop = window.dancers[window.dancers.length - 1].top;
+    var lastLeft = window.dancers[window.dancers.length - 1].left;
+
+    var currentClosestDis = undefined;
+    var currentClosestDancer = 0;
+
+    for (var i = 0; i < window.dancers.length - 1; i++) {
+      var curTop = window.dancers[i].top;
+      var curLeft = window.dancers[i].left;
+      var curDis = Math.sqrt(Math.pow((curTop - lastTop), 2) + Math.pow((curLeft - lastTop), 2));
+
+      if (currentClosestDis === undefined) {
+        currentClosestDis = curDis;
+      } else { // not undefined
+        if (curDis < currentClosestDis) {
+          currentClosestDis = curDis;
+          currentClosestDancer = i;
+        }
+      }
+    }
+
+    window.dancers[window.dancers.length - 1].interact();
+    window.dancers[currentClosestDancer].interact();
 
   });
 
-});
+  $('.colorfulDancer').mouseover(function() {
+    console.log('test');
+    //this.$node.lineUp(700, 700);
+  });
 
+  $('.dancer').mouseover(function() {
+    console.log('test');
+    //this.$node.lineUp(700, 700);
+  });
+
+  // this.$node.on('click', function(event) {
+  //   delete this.$node;
+  // });
+
+});
