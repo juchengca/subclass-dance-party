@@ -1,4 +1,4 @@
-describe('squareDancer', function() {
+describe('dogDancer', function() {
 
   var squareDancer, clock;
   var timeBetweenSteps = 100;
@@ -32,4 +32,26 @@ describe('squareDancer', function() {
       expect(squareDancer.step.callCount).to.be.equal(2);
     });
   });
+
+
+
+
+  describe('dog lineup', function() {
+    it('should line up the dog nodes', function() {
+
+      squareDancer.lineUp(300, 300);
+      expect(squareDancer.newPosition.top).to.be.equal(300);
+      expect(squareDancer.newPosition.left).to.be.equal(300);
+    });
+  });
+
+
+  describe('dog rotation', function() {
+    it('should check if rotation works on dog node', function() {
+
+      squareDancer.interact();
+      expect(squareDancer.rotationInteraction).to.be.equal(true);
+    });
+  });
+
 });

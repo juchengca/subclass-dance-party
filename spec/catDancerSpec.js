@@ -1,4 +1,4 @@
-describe('colorfulDancer', function() {
+describe('catDancer', function() {
 
   var colorfulDancer, clock;
   var timeBetweenSteps = 100;
@@ -32,4 +32,34 @@ describe('colorfulDancer', function() {
       expect(colorfulDancer.step.callCount).to.be.equal(2);
     });
   });
+
+
+
+  describe('cat lineup', function() {
+    it('should line up the cat nodes', function() {
+
+      colorfulDancer.lineUp(300, 300);
+      expect(colorfulDancer.newPosition.top).to.be.equal(300);
+      expect(colorfulDancer.newPosition.left).to.be.equal(300);
+    });
+  });
+
+
+  describe('cat rotation', function() {
+    it('should check if rotation works on cat node', function() {
+
+      colorfulDancer.interact();
+      expect(colorfulDancer.rotationInteraction).to.be.equal(true);
+    });
+  });
+
+
+
+
+
+
+
+
+
 });
+

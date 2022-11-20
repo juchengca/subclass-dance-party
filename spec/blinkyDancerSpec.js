@@ -31,5 +31,16 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+
+  describe('blinky dot lineup', function() {
+    it('should line up the blinky dot nodes', function() {
+
+      blinkyDancer.lineUp(300, 300);
+      expect(blinkyDancer.newPosition.top).to.be.equal(300);
+      expect(blinkyDancer.newPosition.left).to.be.equal(300);
+    });
+  });
+
 });
 

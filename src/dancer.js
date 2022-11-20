@@ -12,6 +12,12 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.top = top;
   this.left = left;
+  this.newPosition = {
+    'top': undefined,
+    'left': undefined
+  };
+
+  this.rotationInteraction;
 };
 
 makeDancer.prototype.step = function() {
@@ -36,12 +42,17 @@ makeDancer.prototype.setPosition = function(top, left) {
 
 
 makeDancer.prototype.lineUp = function (top, left) {
+
+  this.newPosition.top = top;
+  this.newPosition.left = left;
+
   this.setPosition.call(this, top, left);
 };
 
 
 
 makeDancer.prototype.interact = function () {
+  this.rotationInteraction = true;
   this.$node.animate(
     { deg: 180 },
     {

@@ -16,6 +16,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // });
 
   this.mouse();
+
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -36,7 +37,6 @@ makeBlinkyDancer.prototype.step = function() {
 
 makeBlinkyDancer.prototype.mouse = function() {
   this.$node.mouseover(function() {
-    console.log('hi');
     $('.dancer').css('border-radius', '0px');
   });
 
